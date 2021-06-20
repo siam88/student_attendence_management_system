@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>AMS | SEU </title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('theme/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -38,16 +38,24 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
-              <h1>Login Form</h1>
+            @if(Session::has('coc'))
+            <div class="alert alert-danger">
+              <button class="close" data-dismiss="alert">*</button>
+              <strong>{{session('coc')}}</strong>
+            </div>
+            @endif
+        
+            <form method="POST" action="{{url('islogin')}}">
+              <h1>Login </h1>
+              @csrf
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username" name="username" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" name="password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <input type="submit" class="btn btn-default submit" value="Log in" />
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
@@ -62,8 +70,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> SOUTHEAST UNIVERSITY</h1>
+                  <p>©2021 All Rights Reserved by SEU! Privacy and Terms</p>
                 </div>
               </div>
             </form>
