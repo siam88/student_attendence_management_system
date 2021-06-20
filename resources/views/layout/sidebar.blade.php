@@ -7,9 +7,16 @@
                       <ul class="nav child_menu">
                         <li><a href="index.html">Dashboard</a></li>
                         <li><a href="{{url('details')}}">Student Details</a></li>
-                        <li><a href="index3.html">Dashboard3</a></li>
+                       
                       </ul>
                     </li>
+                     <li><a><i class="fa fa-edit"></i> Courses <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{url('courseDetails')}}">All Courses</a></li>
+                       
+                        <li><a href="{{url('enrollcourse')}}">Enroll Courses</a></li>
+                      </ul>
+                    </li>      
                     {{-- <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                         <li><a href="form.html">General Form</a></li>
@@ -132,7 +139,7 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      <img src="images/img.jpg" alt="">John Doe
+                      <img src= {{asset('https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Student-3-512.png') }}  alt="">Student
                       <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">

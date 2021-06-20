@@ -44,7 +44,7 @@
               <strong>{{session('coc')}}</strong>
             </div>
             @endif
-        
+            <h1><i class="fa fa-paw"></i> SOUTHEAST UNIVERSITY</h1>
             <form method="POST" action="{{url('islogin')}}">
               <h1>Login </h1>
               @csrf
@@ -70,7 +70,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> SOUTHEAST UNIVERSITY</h1>
+                  
                   <p>©2021 All Rights Reserved by SEU! Privacy and Terms</p>
                 </div>
               </div>

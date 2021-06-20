@@ -28,3 +28,10 @@ Route::post('islogin','App\Http\Controllers\studentController@studentloged');
 Route::get('details','App\Http\Controllers\studentController@show');
 Route::get('student_edit/{id}',['as'=>'student.edit','uses'=>'App\Http\Controllers\studentController@edit']);
 Route::post('student_update/{id}',['as'=>'student.update','uses'=>'App\Http\Controllers\studentController@update']);
+
+
+
+Route::get('courseDetails','App\Http\Controllers\courseController@show');
+
+
+Route::get('enrollcourse','App\Http\Controllers\EnrollCourseController@create');
